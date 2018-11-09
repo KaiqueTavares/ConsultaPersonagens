@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name" translatable="false">ConsultaPersonagens</string>
+    <string name="pesquisa">Enter the code to be searched</string>
+    <string name="botao_pesquisar">Search</string>
+</resources>

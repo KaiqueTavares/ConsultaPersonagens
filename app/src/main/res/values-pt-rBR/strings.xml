@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="pesquisa">Informe o código a ser pesquisado</string>
+    <string name="botao_pesquisar">Pesquisar</string>
+</resources>
