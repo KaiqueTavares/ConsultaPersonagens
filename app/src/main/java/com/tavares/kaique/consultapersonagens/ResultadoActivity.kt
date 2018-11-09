@@ -1,5 +1,6 @@
 package com.tavares.kaique.consultapersonagens
 
+import android.content.Intent
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Toast
@@ -34,14 +35,19 @@ class ResultadoActivity : AppCompatActivity() {
         //Aqui vou buscar meus personagens passando como meu parametro o ID que estou recuperando no começo deste codigo
         //GetStringExtra do começo do codigo
         service.buscarPersonagem(idValue.toString()).enqueue(object : Callback<Personagem>{
+            //onFailure vai executar quando der falha em pegar meu JSON na API
             override fun onFailure(call: Call<Personagem>?, t: Throwable?) {
+                //Dando a mensagem de erro em caso de falha de dados
                 Toast.makeText(this@ResultadoActivity,
                         "Falha no recebimento de dados",
                         Toast.LENGTH_SHORT).show()
             }
 
+            //Aqui se der tudo certo eu vou:
             override fun onResponse(call: Call<Personagem>?, response: Response<Personagem>?) {
+                //Vou pegar meu JSON codificado e assim vou conseguir fazer pegar meu TEXT e colocar o valor que veio do JSON
                 val personagem = response?.body()
+                //Pegando meus TextView e colocando os valores trazidos pela API
                 tvNome.text = personagem?.nome
                 tvCabelo.text = personagem?.cabelo
                 tvPele.text = personagem?.corPele
@@ -49,5 +55,19 @@ class ResultadoActivity : AppCompatActivity() {
                 tvGenero.text = personagem?.genero
             }
         })
+
+        //Ao clicar no personagem de voltar
+        btnVoltar.setOnClickListener {
+            //Finalizo minha activity
+            finish()
+        }
+
+        //Ao clicar no botão sobre
+        btnSobre.setOnClickListener {
+            //Vou abrir a tela sobre
+            val telaSobre = Intent(this,SobreActivity::class.java)
+            startActivity(telaSobre)
+        }
+
     }
 }

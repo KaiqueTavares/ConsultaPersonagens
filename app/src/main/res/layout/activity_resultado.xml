@@ -119,12 +119,30 @@
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
 
-    <Button
-        android:id="@+id/btnVoltar"
-        style="@style/ButtonsAPP"
-        android:layout_width="100dp"
-        android:layout_height="50dp"
-        android:gravity="center"
-        android:text="Voltar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="1">
+        <Button
+            android:id="@+id/btnVoltar"
+            style="@style/ButtonsAPP"
+            android:layout_marginTop="32dp"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="Voltar"
+            android:layout_weight="0.5"/>
 
+        <Button
+            android:id="@+id/btnSobre"
+            style="@style/ButtonsAPP"
+            android:layout_marginTop="32dp"
+            android:layout_width="100dp"
+            android:layout_height="60dp"
+            android:gravity="center"
+            android:text="Sobre"
+            android:layout_weight="0.5"/>
+
+    </LinearLayout>
 </LinearLayout>
