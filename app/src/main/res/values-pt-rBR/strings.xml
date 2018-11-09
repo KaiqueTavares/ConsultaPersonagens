@@ -2,4 +2,9 @@
 <resources>
     <string name="pesquisa">Informe o código a ser pesquisado</string>
     <string name="botao_pesquisar">Pesquisar</string>
+    <string name="nome">Nome:</string>
+    <string name="cabelo">Cor de Cabelo:</string>
+    <string name="pele">Tonalidade de pele:</string>
+    <string name="aniversario">Ano aniversário:</string>
+    <string name="genero">Genero:</string>
 </resources>

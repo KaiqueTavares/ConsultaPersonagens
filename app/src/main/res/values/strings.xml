@@ -2,4 +2,9 @@
     <string name="app_name" translatable="false">ConsultaPersonagens</string>
     <string name="pesquisa">Enter the code to be searched</string>
     <string name="botao_pesquisar">Search</string>
+    <string name="nome">Name:</string>
+    <string name="cabelo">Hair Color:</string>
+    <string name="pele">Skin Color:</string>
+    <string name="aniversario">Birthday:</string>
+    <string name="genero">Gender:</string>
 </resources>
